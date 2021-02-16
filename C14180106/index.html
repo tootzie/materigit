@@ -9,11 +9,11 @@
     <script>
       $(document).ready(function () {
         $("#datepicker").datepicker();
+        $("#datepicker2").datepicker();
 
         $("#calculate").click(function () {
-          var date = new Date();
           var start = $("#datepicker").datepicker("getDate").getDate();
-          var end = date.getDate();
+          var end = $("#datepicker2").datepicker("getDate").getDate();
           days = end - start;
           $("#result").text(Math.round(days));
         });
@@ -22,8 +22,9 @@
   </head>
   <body>
     <p>C14180106 - Jessica Clarensia</p>
-    <p>Date: <input type="text" id="datepicker" /></p>
-    <button id="calculate">Calculate</button>
+    <p>Date1: <input type="text" id="datepicker" /></p>
+    <p>Date2: <input type="text" id="datepicker2" /></p>
+    <button id="calculate">Calculate 2 Datepicker</button>
     <div>
       <label id="result">Result Here</label>
     </div>
