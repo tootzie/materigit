@@ -1,5 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Materi Git</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#datepicker").datepicker();
+        $("#datepicker2").datepicker();
+
+        $("#calculate").click(function () {
+          var start = $("#datepicker").datepicker("getDate").getDate();
+          var end = $("#datepicker2").datepicker("getDate").getDate();
+          days = end - start;
+          $("#result").text(Math.round(days));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>C14180106 - Jessica Clarensia</p>
+    <p>Date1: <input type="text" id="datepicker" /></p>
+    <p>Date2: <input type="text" id="datepicker2" /></p>
+    <button id="calculate">Calculate 2 Datepicker</button>
+    <div>
+      <label id="result">Result Here</label>
+    </div>
+    <p>
+      dari learn git branching saya menjadi lebih mudah untuk belajar git,
+      terutama dalam memvisualisasi branch, commit dan merge
+    </p>
+  </body>
+</html>
 <p>C14180106 - Jessica Clarensia</p>
+<<<<<<< HEAD
 <p>Pemrograman iOS</p>
 <p>
   Aplikasi untuk hewan peliharaan (tempat grooming, tempat beli makan/baju, dll)
 </p>
+=======
+<p>Ini tambahan 2 buah</p>
+>>>>>>> C14180106-G
