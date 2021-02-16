@@ -1,1 +1,31 @@
-<p>C14180106 - Jessica Clarensia</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Materi Git</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#datepicker").datepicker();
+
+        $("#calculate").click(function () {
+          var date = new Date();
+          var start = $("#datepicker").datepicker("getDate").getDate();
+          var end = date.getDate();
+          days = end - start;
+          $("#result").text(Math.round(days));
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>C14180106 - Jessica Clarensia</p>
+    <p>Date: <input type="text" id="datepicker" /></p>
+    <button id="calculate">Calculate</button>
+    <div>
+      <label id="result">Result Here</label>
+    </div>
+  </body>
+</html>
